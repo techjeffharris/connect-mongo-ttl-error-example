@@ -199,34 +199,34 @@ connection.once('open', function connectionOpen () {
 
     io.use(passportSocketIo.authorize(authOptions))
         .on('connect', function socketConnect (socket) {
+        var user = socket.request.user;
 
-        debug('socket connect')
+        debug(user.username, 'connected')
 
         socket.emit('joined', 'You');
-        socket.broadcast.emit('joined', socket.id);
+        socket.broadcast.emit('joined', user.username);
 
-        online.push(socket.id);
+        online.push(user.username);
 
-        var user = socket.request.user;
 
         socket.on('message', function (msg) {
 
             assert.notEqual('CRASH!', msg);
             
-            debug(socket.id, 'says:', msg);
+            debug(user.username, 'says:', msg);
 
             socket.emit('chat', 'You', msg)
-            socket.broadcast.emit('chat', socket.id, msg);
+            socket.broadcast.emit('chat', user.username, msg);
         });
 
         debug('online', online)
 
         socket.on('disconnect', function () {
-            debug('socket disconnect!');
+            debug(user.username, 'disconnected');
 
-            io.sockets.emit('left', socket.id);
+            io.sockets.emit('left', user.username);
         
-            var index = online.indexOf(socket.id);
+            var index = online.indexOf(user.username);
             online.splice(index, 1);
 
             debug('online', online)
