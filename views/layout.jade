@@ -1,0 +1,63 @@
+doctype html
+html
+    head
+        block head
+            title connect-mongo ttl error example
+            block scripts
+                script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js') 
+                block socketio
+    body
+        block wrapper
+            #wrapper
+                block header
+                    #header
+                        block breadcrumbs
+                            #breadcrumbs
+                                // breadcrumbs leave a trail as players navigate the server
+                                h1
+                                    - // remove everything after and including the '?'
+                                    - var breadcrumbs = request.originalUrl.replace(/\?.*$/, '')
+                                    - // split the string by '/' into an array
+                                    - breadcrumbs = breadcrumbs.split('/')
+                                    - // for each item in the array
+                                    - each crumb, id in breadcrumbs
+                                        if (!id)
+                                            a(href='/') Connect-Mongo-Test
+                                        else
+                                            if (!!crumb)
+                                                | &nbsp;/&nbsp;
+                                                - var url = ''
+                                                - for (var i=1; i<=id   ; i++)
+                                                    - url += '/' + breadcrumbs[i]
+                                                    //- - crumb = crumb.charAt(0).toUpperCase() + crumb.slice(1)
+                                                a(href=url) #{crumb}
+                        block banner
+                            #banner
+                                h2 Attempt to recreate "Error setting TTL index on collection" reported as 
+                                    a(href="https://github.com/kcbanner/connect-mongo/issues/80") issue #80
+                                    | &nbsp;on 
+                                    a(href="https://github.com/kcbanner/connect-mongo/issues/80") kcbanner/connect-mongo
+                       block session
+                            #session
+                                if (request.user)
+                                    span Logged on as #{request.user.username}
+                                        | &nbsp;[&nbsp;
+                                        a(href='/logoff') Logoff
+                                        | &nbsp;]&nbsp;
+                                else
+                                    span Not logged on. 
+                                        | [&nbsp; 
+                                        a(href='/logon') Logon 
+                                        | &nbsp;|&nbsp;
+                                        a(href='/register') Register
+                                        | &nbsp;]
+                        block nav
+                            #nav
+                                ul#links
+                                    li: a(href='/protected') protected
+                block body
+                    #body
+                        block content
+                            #content
+                                    
+                                    

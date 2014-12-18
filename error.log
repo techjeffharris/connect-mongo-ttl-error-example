@@ -1,0 +1,1417 @@
+17 Dec 23:26:51 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +4s
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +15ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test made it this far! +56ms
+  connect-mongo-ttl-err-test request.user +1ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +0ms
+  connect-mongo-ttl-err-test client connect! +289ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  socket.io:server serve client 304 +3s
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test made it this far! +3ms
+  socket.io:server incoming connection with id X304IX6GvnauB5DMAAAA +161ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room X304IX6GvnauB5DMAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +3ms
+  connect-mongo-ttl-err-test socket connect +158ms
+  connect-mongo-ttl-err-test online +0ms [ 'X304IX6GvnauB5DMAAAA' ]
+  socket.io:socket joined room X304IX6GvnauB5DMAAAA +1ms
+  connect-mongo-ttl-err-test client connect! +49ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +5ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test made it this far! +153ms
+  connect-mongo-ttl-err-test client connect! +53ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23 ]
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","Type here to chat!"]} +1s
+  socket.io:socket emitting event ["message","Type here to chat!"] +1ms
+  connect-mongo-ttl-err-test X304IX6GvnauB5DMAAAA +1s says: Type here to chat!
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","CRASH!"]} +6s
+  socket.io:socket emitting event ["message","CRASH!"] +0ms
+
+AssertionError: "CRASH!" != "CRASH!"
+    at Socket.<anonymous> (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/server.js:217:20)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onevent (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:327:8)
+    at Socket.onpacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:287:12)
+    at Client.ondecoded (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:193:14)
+    at Decoder.Emitter.emit (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/node_modules/component-emitter/index.js:134:20)
+    at Decoder.add (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/index.js:247:12)
+    at Client.ondata (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:175:18)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onPacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/engine.io/lib/socket.js:99:14)
+17 Dec 23:27:04 - [nodemon] app crashed - waiting for file changes before starting...
+rs  
+17 Dec 23:27:14 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +2ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +4s
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +13ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +1ms [ 17 ]
+  socket.io:server incoming connection with id VrDoUgY6Ht8JWEcKAAAA +4s
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +25ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room VrDoUgY6Ht8JWEcKAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +32ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  connect-mongo-ttl-err-test online +0ms [ 'VrDoUgY6Ht8JWEcKAAAA' ]
+  socket.io:socket joined room VrDoUgY6Ht8JWEcKAAAA +1ms
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","CRASH!"]} +6s
+  socket.io:socket emitting event ["message","CRASH!"] +1ms
+
+AssertionError: "CRASH!" != "CRASH!"
+    at Socket.<anonymous> (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/server.js:217:20)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onevent (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:327:8)
+    at Socket.onpacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:287:12)
+    at Client.ondecoded (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:193:14)
+    at Decoder.Emitter.emit (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/node_modules/component-emitter/index.js:134:20)
+    at Decoder.add (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/index.js:247:12)
+    at Client.ondata (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:175:18)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onPacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/engine.io/lib/socket.js:99:14)
+17 Dec 23:27:25 - [nodemon] app crashed - waiting for file changes before starting...
+rs
+17 Dec 23:27:27 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +1s
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +13ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id 4k4VIhZ9nErvN-j9AAAA +1s
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +25ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room 4k4VIhZ9nErvN-j9AAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +32ms
+  connect-mongo-ttl-err-test socket connect +4ms
+  connect-mongo-ttl-err-test online +1ms [ '4k4VIhZ9nErvN-j9AAAA' ]
+  socket.io:socket joined room 4k4VIhZ9nErvN-j9AAAA +2ms
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","CRASH!"]} +2s
+  socket.io:socket emitting event ["message","CRASH!"] +0ms
+
+AssertionError: "CRASH!" != "CRASH!"
+    at Socket.<anonymous> (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/server.js:217:20)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onevent (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:327:8)
+    at Socket.onpacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:287:12)
+    at Client.ondecoded (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:193:14)
+    at Decoder.Emitter.emit (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/node_modules/component-emitter/index.js:134:20)
+    at Decoder.add (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/index.js:247:12)
+    at Client.ondata (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:175:18)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onPacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/engine.io/lib/socket.js:99:14)
+17 Dec 23:27:31 - [nodemon] app crashed - waiting for file changes before starting...
+rs
+17 Dec 23:27:33 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +3s
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +13ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id C6vxAa2rkwVGJZ_YAAAA +2s
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +27ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +15ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room C6vxAa2rkwVGJZ_YAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +40ms
+  connect-mongo-ttl-err-test socket connect +4ms
+  connect-mongo-ttl-err-test online +0ms [ 'C6vxAa2rkwVGJZ_YAAAA' ]
+  socket.io:socket joined room C6vxAa2rkwVGJZ_YAAAA +2ms
+17 Dec 23:27:59 - [nodemon] restarting due to changes...
+17 Dec 23:27:59 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +2ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +219ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +11ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id 6BqGGDm7Aq6vmlNPAAAA +245ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +23ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room 6BqGGDm7Aq6vmlNPAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +31ms
+  connect-mongo-ttl-err-test socket connect +4ms
+  connect-mongo-ttl-err-test online +0ms [ '6BqGGDm7Aq6vmlNPAAAA' ]
+  socket.io:socket joined room 6BqGGDm7Aq6vmlNPAAAA +1ms
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","CRASH!"]} +4s
+  socket.io:socket emitting event ["message","CRASH!"] +0ms
+
+AssertionError: "CRASH!" != "CRASH!"
+    at Socket.<anonymous> (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/server.js:217:20)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onevent (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:327:8)
+    at Socket.onpacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:287:12)
+    at Client.ondecoded (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:193:14)
+    at Decoder.Emitter.emit (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/node_modules/component-emitter/index.js:134:20)
+    at Decoder.add (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/index.js:247:12)
+    at Client.ondata (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:175:18)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onPacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/engine.io/lib/socket.js:99:14)
+17 Dec 23:28:04 - [nodemon] app crashed - waiting for file changes before starting...
+rs
+17 Dec 23:28:08 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +716ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +12ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id dZ_LRa5wNWQCNqZTAAAA +745ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +26ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +16ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room dZ_LRa5wNWQCNqZTAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +39ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  connect-mongo-ttl-err-test online +0ms [ 'dZ_LRa5wNWQCNqZTAAAA' ]
+  socket.io:socket joined room dZ_LRa5wNWQCNqZTAAAA +1ms
+17 Dec 23:28:18 - [nodemon] restarting due to changes...
+17 Dec 23:28:18 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +2ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +346ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +11ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id 8mg9E9KHESZAPp6-AAAA +374ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +25ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +11ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room 8mg9E9KHESZAPp6-AAAA +1ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +32ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  connect-mongo-ttl-err-test online +0ms [ '8mg9E9KHESZAPp6-AAAA' ]
+  socket.io:socket joined room 8mg9E9KHESZAPp6-AAAA +1ms
+  connect-mongo-ttl-err-test made it this far! +10s
+  connect-mongo-ttl-err-test request.user +1ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  socket.io:client client close with reason transport close +10s
+  socket.io:socket closing socket - reason transport close +10s
+  socket.io:client ignoring remove for 8mg9E9KHESZAPp6-AAAA +1ms
+  connect-mongo-ttl-err-test socket disconnect! +215ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client connect! +36ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  socket.io:server serve client 304 +10s
+  connect-mongo-ttl-err-test client disconnect! +4ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test made it this far! +1ms
+  socket.io:server incoming connection with id DWwStU-sz092qxOrAAAB +151ms
+  socket.io:client connecting to namespace / +189ms
+  socket.io:namespace adding socket to nsp / +10s
+  socket.io:socket socket connected - writing packet +192ms
+  socket.io:socket joining room DWwStU-sz092qxOrAAAB +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +4ms
+  connect-mongo-ttl-err-test socket connect +151ms
+  connect-mongo-ttl-err-test online +0ms [ 'DWwStU-sz092qxOrAAAB' ]
+  socket.io:socket joined room DWwStU-sz092qxOrAAAB +1ms
+  connect-mongo-ttl-err-test client connect! +55ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +3ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client connect! +20ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +170ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +2ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test made it this far! +5ms
+  connect-mongo-ttl-err-test made it this far! +1s
+  connect-mongo-ttl-err-test request.user +0ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  socket.io:client client close with reason transport close +1s
+  socket.io:socket closing socket - reason transport close +1s
+  socket.io:client ignoring remove for DWwStU-sz092qxOrAAAB +0ms
+  connect-mongo-ttl-err-test socket disconnect! +59ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:server serve client 304 +1s
+  connect-mongo-ttl-err-test made it this far! +29ms
+  socket.io:server incoming connection with id j8gX0ohkIehdG3DIAAAC +164ms
+  socket.io:client connecting to namespace / +190ms
+  socket.io:namespace adding socket to nsp / +1s
+  socket.io:socket socket connected - writing packet +192ms
+  socket.io:socket joining room j8gX0ohkIehdG3DIAAAC +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +3ms
+  connect-mongo-ttl-err-test socket connect +163ms
+  connect-mongo-ttl-err-test online +0ms [ 'j8gX0ohkIehdG3DIAAAC' ]
+  socket.io:socket joined room j8gX0ohkIehdG3DIAAAC +1ms
+  connect-mongo-ttl-err-test client connect! +85ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client connect! +4ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23, 25 ]
+  connect-mongo-ttl-err-test client disconnect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 25 ]
+  connect-mongo-ttl-err-test made it this far! +152ms
+  connect-mongo-ttl-err-test made it this far! +487ms
+  connect-mongo-ttl-err-test made it this far! +8ms
+  socket.io:client client close with reason transport close +805ms
+  socket.io:socket closing socket - reason transport close +805ms
+  socket.io:client ignoring remove for j8gX0ohkIehdG3DIAAAC +0ms
+  connect-mongo-ttl-err-test socket disconnect! +68ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test made it this far! +261ms
+  connect-mongo-ttl-err-test made it this far! +1s
+redir []
+  connect-mongo-ttl-err-test made it this far! +301ms
+  connect-mongo-ttl-err-test made it this far! +4s
+  connect-mongo-ttl-err-test made it this far! +513ms
+  connect-mongo-ttl-err-test made it this far! +363ms
+  connect-mongo-ttl-err-test made it this far! +1s
+  connect-mongo-ttl-err-test request.user +0ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  socket.io:server serve client 304 +8s
+  connect-mongo-ttl-err-test made it this far! +106ms
+  socket.io:server incoming connection with id A8NCMiiuLYYRUr6PAAAD +33ms
+  socket.io:client connecting to namespace / +7s
+  socket.io:namespace adding socket to nsp / +8s
+  socket.io:socket socket connected - writing packet +7s
+  socket.io:socket joining room A8NCMiiuLYYRUr6PAAAD +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test socket connect +33ms
+  connect-mongo-ttl-err-test online +0ms [ 'A8NCMiiuLYYRUr6PAAAD' ]
+  socket.io:socket joined room A8NCMiiuLYYRUr6PAAAD +0ms
+  connect-mongo-ttl-err-test client connect! +73ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client connect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23, 25 ]
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 25 ]
+  connect-mongo-ttl-err-test made it this far! +161ms
+  connect-mongo-ttl-err-test made it this far! +679ms
+  connect-mongo-ttl-err-test request.user +1ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +0ms
+  socket.io:client client close with reason transport close +1s
+  socket.io:socket closing socket - reason transport close +1s
+  socket.io:client ignoring remove for A8NCMiiuLYYRUr6PAAAD +0ms
+  connect-mongo-ttl-err-test socket disconnect! +112ms
+  connect-mongo-ttl-err-test online +1ms []
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:server serve client 304 +1s
+  connect-mongo-ttl-err-test made it this far! +65ms
+  socket.io:server incoming connection with id RqN_9zBCw2b-zhqvAAAE +32ms
+  socket.io:client connecting to namespace / +96ms
+  socket.io:namespace adding socket to nsp / +1s
+  socket.io:socket socket connected - writing packet +98ms
+  socket.io:socket joining room RqN_9zBCw2b-zhqvAAAE +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test socket connect +32ms
+  connect-mongo-ttl-err-test online +0ms [ 'RqN_9zBCw2b-zhqvAAAE' ]
+  socket.io:socket joined room RqN_9zBCw2b-zhqvAAAE +0ms
+  connect-mongo-ttl-err-test client connect! +52ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test client connect! +5ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test made it this far! +145ms
+  connect-mongo-ttl-err-test made it this far! +548ms
+  connect-mongo-ttl-err-test request.user +0ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +0ms
+  socket.io:client client close with reason transport close +778ms
+  socket.io:socket closing socket - reason transport close +778ms
+  socket.io:client ignoring remove for RqN_9zBCw2b-zhqvAAAE +0ms
+  connect-mongo-ttl-err-test socket disconnect! +26ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:server serve client 304 +877ms
+  connect-mongo-ttl-err-test made it this far! +99ms
+  socket.io:server incoming connection with id f63WMEi9d7I0Bx_xAAAF +44ms
+  socket.io:client connecting to namespace / +141ms
+  socket.io:namespace adding socket to nsp / +921ms
+  socket.io:socket socket connected - writing packet +143ms
+  socket.io:socket joining room f63WMEi9d7I0Bx_xAAAF +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test socket connect +44ms
+  connect-mongo-ttl-err-test online +0ms [ 'f63WMEi9d7I0Bx_xAAAF' ]
+  socket.io:socket joined room f63WMEi9d7I0Bx_xAAAF +0ms
+  connect-mongo-ttl-err-test client connect! +64ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client connect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23, 25 ]
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 25 ]
+  connect-mongo-ttl-err-test made it this far! +246ms
+  connect-mongo-ttl-err-test made it this far! +2s
+  connect-mongo-ttl-err-test request.user +0ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  socket.io:client client close with reason transport close +1s
+  socket.io:socket closing socket - reason transport close +1s
+  socket.io:client ignoring remove for f63WMEi9d7I0Bx_xAAAF +1ms
+  connect-mongo-ttl-err-test socket disconnect! +33ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:server serve client 304 +2s
+  connect-mongo-ttl-err-test made it this far! +73ms
+  socket.io:server incoming connection with id sd2PREOt-3stPONqAAAG +32ms
+  socket.io:client connecting to namespace / +102ms
+  socket.io:namespace adding socket to nsp / +2s
+  socket.io:socket socket connected - writing packet +106ms
+  socket.io:socket joining room sd2PREOt-3stPONqAAAG +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +3ms
+  connect-mongo-ttl-err-test socket connect +32ms
+  connect-mongo-ttl-err-test online +0ms [ 'sd2PREOt-3stPONqAAAG' ]
+  socket.io:socket joined room sd2PREOt-3stPONqAAAG +0ms
+  connect-mongo-ttl-err-test client connect! +57ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +3ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test client connect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test made it this far! +181ms
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","Type here to chat!"]} +2s
+  socket.io:socket emitting event ["message","Type here to chat!"] +1ms
+  connect-mongo-ttl-err-test sd2PREOt-3stPONqAAAG +2s says: Type here to chat!
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","CRASH!"]} +5s
+  socket.io:socket emitting event ["message","CRASH!"] +1ms
+
+AssertionError: "CRASH!" != "CRASH!"
+    at Socket.<anonymous> (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/server.js:217:20)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onevent (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:327:8)
+    at Socket.onpacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/socket.js:287:12)
+    at Client.ondecoded (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:193:14)
+    at Decoder.Emitter.emit (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/node_modules/component-emitter/index.js:134:20)
+    at Decoder.add (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/socket.io-parser/index.js:247:12)
+    at Client.ondata (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/lib/client.js:175:18)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.onPacket (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/socket.io/node_modules/engine.io/lib/socket.js:99:14)
+17 Dec 23:28:52 - [nodemon] app crashed - waiting for file changes before starting...
+RS
+17 Dec 23:28:56 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +2ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+r  connect-mongo-ttl-err-test client connect! +740ms
+  connect-mongo-ttl-err-test clients +1ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +12ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id Kg0WzE4xNQRP075bAAAA +768ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +23ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room Kg0WzE4xNQRP075bAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +32ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  connect-mongo-ttl-err-test online +0ms [ 'Kg0WzE4xNQRP075bAAAA' ]
+  socket.io:socket joined room Kg0WzE4xNQRP075bAAAA +2ms
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","asdf"]} +54s
+  socket.io:socket emitting event ["message","asdf"] +0ms
+  connect-mongo-ttl-err-test Kg0WzE4xNQRP075bAAAA +55s says: asdf
+17 Dec 23:30:21 - [nodemon] restarting due to changes...
+17 Dec 23:30:21 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +228ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +10ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id dmVNsB09bov_yzUKAAAA +255ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +24ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +11ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room dmVNsB09bov_yzUKAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +32ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  connect-mongo-ttl-err-test online +0ms [ 'dmVNsB09bov_yzUKAAAA' ]
+  socket.io:socket joined room dmVNsB09bov_yzUKAAAA +1ms
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","asdf"]} +5s
+  socket.io:socket emitting event ["message","asdf"] +0ms
+  connect-mongo-ttl-err-test dmVNsB09bov_yzUKAAAA +5s says: asdf
+  socket.io:client writing packet {"type":2,"data":["chat","You","asdf"],"nsp":"/"} +5s
+17 Dec 23:30:34 - [nodemon] restarting due to changes...
+17 Dec 23:30:34 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +357ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +12ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id 5JtQfDOdRTLC73s1AAAA +386ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +24ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room 5JtQfDOdRTLC73s1AAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +31ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  connect-mongo-ttl-err-test online +0ms [ '5JtQfDOdRTLC73s1AAAA' ]
+  socket.io:socket joined room 5JtQfDOdRTLC73s1AAAA +1ms
+  connect-mongo-ttl-err-test made it this far! +397ms
+  connect-mongo-ttl-err-test request.user +0ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +2ms
+  socket.io:client client close with reason transport close +616ms
+  socket.io:socket closing socket - reason transport close +616ms
+  socket.io:client ignoring remove for 5JtQfDOdRTLC73s1AAAA +1ms
+  connect-mongo-ttl-err-test socket disconnect! +217ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client connect! +35ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  socket.io:server serve client 304 +685ms
+  connect-mongo-ttl-err-test client disconnect! +5ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test made it this far! +2ms
+  socket.io:server incoming connection with id E70l_WccOjl-7g96AAAB +171ms
+  socket.io:client connecting to namespace / +208ms
+  socket.io:namespace adding socket to nsp / +856ms
+  socket.io:socket socket connected - writing packet +211ms
+  socket.io:socket joining room E70l_WccOjl-7g96AAAB +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +4ms
+  connect-mongo-ttl-err-test socket connect +169ms
+  connect-mongo-ttl-err-test online +0ms [ 'E70l_WccOjl-7g96AAAB' ]
+  socket.io:socket joined room E70l_WccOjl-7g96AAAB +1ms
+  connect-mongo-ttl-err-test client connect! +41ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +3ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test made it this far! +173ms
+  connect-mongo-ttl-err-test client connect! +52ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +3ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","Type here to chat!"]} +2s
+  socket.io:socket emitting event ["message","Type here to chat!"] +0ms
+  connect-mongo-ttl-err-test E70l_WccOjl-7g96AAAB +3s says: Type here to chat!
+  socket.io:client writing packet {"type":2,"data":["chat","You","Type here to chat!"],"nsp":"/"} +2s
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","Type here to chat!"]} +1s
+  socket.io:socket emitting event ["message","Type here to chat!"] +1ms
+  connect-mongo-ttl-err-test E70l_WccOjl-7g96AAAB +2s says: Type here to chat!
+  socket.io:client writing packet {"type":2,"data":["chat","You","Type here to chat!"],"nsp":"/"} +1s
+17 Dec 23:31:47 - [nodemon] restarting due to changes...
+17 Dec 23:31:47 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +356ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +14ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id LG7ccZkTk-RtMY_AAAAA +386ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +27ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room LG7ccZkTk-RtMY_AAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +35ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +1ms
+  connect-mongo-ttl-err-test online +0ms [ 'LG7ccZkTk-RtMY_AAAAA' ]
+  socket.io:socket joined room LG7ccZkTk-RtMY_AAAAA +3ms
+17 Dec 23:32:03 - [nodemon] restarting due to changes...
+17 Dec 23:32:03 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +2ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +365ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +12ms
+  connect-mongo-ttl-err-test clients +1ms []
+  connect-mongo-ttl-err-test client connect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id EV8xqArY9yKgHkhWAAAA +394ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +27ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +12ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room EV8xqArY9yKgHkhWAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +36ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test online +0ms [ 'EV8xqArY9yKgHkhWAAAA' ]
+  socket.io:socket joined room EV8xqArY9yKgHkhWAAAA +2ms
+17 Dec 23:32:18 - [nodemon] restarting due to changes...
+17 Dec 23:32:18 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +2ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +313ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +13ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id X-xtqwsFkVH38V4jAAAA +343ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +25ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room X-xtqwsFkVH38V4jAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +32ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +1ms
+  connect-mongo-ttl-err-test online +1ms [ 'X-xtqwsFkVH38V4jAAAA' ]
+  socket.io:socket joined room X-xtqwsFkVH38V4jAAAA +3ms
+  connect-mongo-ttl-err-test made it this far! +6s
+  connect-mongo-ttl-err-test request.user +1ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  socket.io:client client close with reason transport close +6s
+  socket.io:socket closing socket - reason transport close +6s
+  socket.io:client ignoring remove for X-xtqwsFkVH38V4jAAAA +0ms
+  connect-mongo-ttl-err-test socket disconnect! +213ms
+  connect-mongo-ttl-err-test online +1ms []
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client connect! +33ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  socket.io:server serve client 304 +6s
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test made it this far! +0ms
+  socket.io:server incoming connection with id 0KXb3aOCR6ADcqnrAAAB +164ms
+  socket.io:client connecting to namespace / +199ms
+  socket.io:namespace adding socket to nsp / +6s
+  socket.io:socket socket connected - writing packet +202ms
+  socket.io:socket joining room 0KXb3aOCR6ADcqnrAAAB +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +3ms
+  connect-mongo-ttl-err-test socket connect +161ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +0ms
+  connect-mongo-ttl-err-test online +1ms [ '0KXb3aOCR6ADcqnrAAAB' ]
+  socket.io:socket joined room 0KXb3aOCR6ADcqnrAAAB +1ms
+  connect-mongo-ttl-err-test client connect! +67ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +3ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 24 ]
+  connect-mongo-ttl-err-test made it this far! +172ms
+  connect-mongo-ttl-err-test client connect! +49ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +3ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","Type here to chat!"]} +4s
+  socket.io:socket emitting event ["message","Type here to chat!"] +1ms
+  connect-mongo-ttl-err-test 0KXb3aOCR6ADcqnrAAAB +4s says: Type here to chat!
+  socket.io:client writing packet {"type":2,"data":["chat","You","Type here to chat!"],"nsp":"/"} +4s
+  connect-mongo-ttl-err-test made it this far! +2s
+  connect-mongo-ttl-err-test request.user +0ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  socket.io:client client close with reason transport close +1s
+  socket.io:socket closing socket - reason transport close +1s
+  socket.io:client ignoring remove for 0KXb3aOCR6ADcqnrAAAB +1ms
+  connect-mongo-ttl-err-test socket disconnect! +47ms
+  connect-mongo-ttl-err-test online +11ms []
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client connect! +15ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +4ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test made it this far! +1ms
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 24 ]
+  socket.io:server serve client source +6s
+  socket.io:server incoming connection with id tg_yyp9qVVMr_5UQAAAC +154ms
+  socket.io:client connecting to namespace / +187ms
+  socket.io:namespace adding socket to nsp / +6s
+  socket.io:socket socket connected - writing packet +189ms
+  socket.io:socket joining room tg_yyp9qVVMr_5UQAAAC +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test socket connect +156ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +0ms
+  connect-mongo-ttl-err-test online +0ms [ 'tg_yyp9qVVMr_5UQAAAC' ]
+  socket.io:socket joined room tg_yyp9qVVMr_5UQAAAC +0ms
+  connect-mongo-ttl-err-test client connect! +52ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client connect! +4ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 24, 23, 25 ]
+  connect-mongo-ttl-err-test client disconnect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 25 ]
+  connect-mongo-ttl-err-test made it this far! +160ms
+17 Dec 23:33:06 - [nodemon] restarting due to changes...
+17 Dec 23:33:06 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +2ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +322ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +12ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id gVviEry_-m9pQVfyAAAA +352ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +25ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +11ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room gVviEry_-m9pQVfyAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +32ms
+  connect-mongo-ttl-err-test socket connect +4ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test online +1ms [ 'gVviEry_-m9pQVfyAAAA' ]
+  socket.io:socket joined room gVviEry_-m9pQVfyAAAA +2ms
+17 Dec 23:33:20 - [nodemon] restarting due to changes...
+17 Dec 23:33:20 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +367ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +13ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id 4yY-ixDNRKJCB2c1AAAA +398ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +26ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room 4yY-ixDNRKJCB2c1AAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +31ms
+  connect-mongo-ttl-err-test socket connect +4ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test online +1ms [ '4yY-ixDNRKJCB2c1AAAA' ]
+  socket.io:socket joined room 4yY-ixDNRKJCB2c1AAAA +2ms
+17 Dec 23:34:42 - [nodemon] restarting due to changes...
+17 Dec 23:34:42 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +2ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +226ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +15ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id ibMRJooLtcKrtcKvAAAA +260ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +27ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +11ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room ibMRJooLtcKrtcKvAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +33ms
+  connect-mongo-ttl-err-test socket connect +4ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test online +1ms [ 'ibMRJooLtcKrtcKvAAAA' ]
+  socket.io:socket joined room ibMRJooLtcKrtcKvAAAA +2ms
+17 Dec 23:35:01 - [nodemon] restarting due to changes...
+17 Dec 23:35:01 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +192ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +14ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id AKnTtsFePMSr3TnOAAAA +224ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +27ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +23ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room AKnTtsFePMSr3TnOAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +42ms
+  connect-mongo-ttl-err-test socket connect +7ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test online +1ms [ 'AKnTtsFePMSr3TnOAAAA' ]
+  socket.io:socket joined room AKnTtsFePMSr3TnOAAAA +3ms
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test made it this far! +2s
+  connect-mongo-ttl-err-test request.user +0ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +2ms
+  socket.io:client client close with reason transport close +1s
+  socket.io:socket closing socket - reason transport close +1s
+  socket.io:client ignoring remove for AKnTtsFePMSr3TnOAAAA +1ms
+  connect-mongo-ttl-err-test socket disconnect! +215ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client connect! +33ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +5ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test made it this far! +1ms
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:server serve client source +2s
+  socket.io:server incoming connection with id k6G1s139t67syyATAAAB +163ms
+  socket.io:client connecting to namespace / +205ms
+  socket.io:namespace adding socket to nsp / +2s
+  socket.io:socket socket connected - writing packet +209ms
+  socket.io:socket joining room k6G1s139t67syyATAAAB +1ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +4ms
+  connect-mongo-ttl-err-test socket connect +168ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +0ms
+  connect-mongo-ttl-err-test online +1ms [ 'k6G1s139t67syyATAAAB' ]
+  socket.io:socket joined room k6G1s139t67syyATAAAB +1ms
+  connect-mongo-ttl-err-test client connect! +67ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test made it this far! +220ms
+rs    
+17 Dec 23:35:13 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +363ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +13ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id 2p4RbrdgXXk9WE7-AAAA +392ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +25ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +9ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room 2p4RbrdgXXk9WE7-AAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +32ms
+  connect-mongo-ttl-err-test socket connect +5ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +1ms
+  connect-mongo-ttl-err-test online +0ms [ '2p4RbrdgXXk9WE7-AAAA' ]
+  socket.io:socket joined room 2p4RbrdgXXk9WE7-AAAA +2ms
+  connect-mongo-ttl-err-test made it this far! +1s
+  connect-mongo-ttl-err-test request.user +1ms { salt: '18a732cf4bbab52bbfe6851d3c87d33e179060e22f8d9a89561d9ba0f602c1f9',
+  hash: 'bb91a44293a90abfab9d722017bca5d41b8e7daad115853f329a5831f5ee7214dd51e1c9ce3ec4293a6c18a0a326b3885e2b112e99c2add8c6f7b2e917de95a1e72bf6671c8f8219faae15231c8b7c210d1f4cad1f104334fc60b79745e9416efdabbb2ad29c0c18a957bd91118fff841aaece69c6865c70018cbc7804297a00e22b2381bb7ce91d9704c67481be73845b697f10f40c79cca8b581cea3df59da7808248e9345b66afb03598d102778581d87b52c296d2b1866a9b67706259b176f5826ff24a4ff02ec0c16724ab19ff999a35645632f9245fb32c5e1a88564ece4046a375759b7a147025b8ce67080388d12197d829766420ebe972856b53b1964c6b17a457aa719fe13d72a5a41e11cc2aac981a056477b9e4432a26eac4d40f4e8038cad803bfed69566231225ad6d9c3ada52c0869bfe635b869f920383eb978973da417593677fb33cdc8a4bf86cb58eb81ce457eb39b6c0e8ff1018ae58f9881988ae30076b6064aa3d36d60203bcf64f7f8f941e9ebed9e1757f57d82dd064cd85fb813aef495bf5f4e7f9ebf9791173068d67de514670958b72ce713b2e5ee51a4351378dfd952b665fdfcf23be31e003960a5dfa4307de8c1ea1fc89afb5c2921611b285c7e46ef0fd320cb99599ac045153f08c65d1c6c165bdff9f8b810bda2e2f052fd700ba5aaf90aa01c6577e2b9d9c4f283eec6d242aa01968',
+  username: 'jeff',
+  _id: 549238c5eef4914c31a46b59,
+  __v: 0,
+  created: Wed Dec 17 2014 18:15:33 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  socket.io:client client close with reason transport close +1s
+  socket.io:socket closing socket - reason transport close +1s
+  socket.io:client ignoring remove for 2p4RbrdgXXk9WE7-AAAA +1ms
+  connect-mongo-ttl-err-test socket disconnect! +228ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client connect! +27ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +5ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test made it this far! +3ms
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:server serve client source +1s
+  socket.io:server serve client source +114ms
+  socket.io:server incoming connection with id TIDvaeepIBgARoY7AAAB +47ms
+  socket.io:client connecting to namespace / +199ms
+  socket.io:namespace adding socket to nsp / +1s
+  socket.io:socket socket connected - writing packet +202ms
+  socket.io:socket joining room TIDvaeepIBgARoY7AAAB +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +3ms
+  connect-mongo-ttl-err-test socket connect +166ms
+  socket.io:client writing packet {"type":2,"data":["join","You"],"nsp":"/"} +0ms
+  connect-mongo-ttl-err-test online +0ms [ 'TIDvaeepIBgARoY7AAAB' ]
+  socket.io:socket joined room TIDvaeepIBgARoY7AAAB +1ms
+  connect-mongo-ttl-err-test client connect! +53ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +3ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test client connect! +4ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test made it this far! +163ms
+17 Dec 23:35:28 - [nodemon] restarting due to changes...
+17 Dec 23:35:28 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +2ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +181ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +11ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +1ms [ 17 ]
+  socket.io:server incoming connection with id a6q277x-CDgZp-fHAAAA +209ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +24ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room a6q277x-CDgZp-fHAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +31ms
+  connect-mongo-ttl-err-test socket connect +4ms
+  socket.io:client writing packet {"type":2,"data":["joined","You"],"nsp":"/"} +1ms
+  connect-mongo-ttl-err-test online +1ms [ 'a6q277x-CDgZp-fHAAAA' ]
+  socket.io:socket joined room a6q277x-CDgZp-fHAAAA +2ms
+  socket.io:socket got packet {"type":2,"nsp":"/","data":["message","Type here to chat!"]} +4s
+  socket.io:socket emitting event ["message","Type here to chat!"] +0ms
+  connect-mongo-ttl-err-test a6q277x-CDgZp-fHAAAA +4s says: Type here to chat!
+  socket.io:client writing packet {"type":2,"data":["chat","You","Type here to chat!"],"nsp":"/"} +4s
+  connect-mongo-ttl-err-test client connect! +7s
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +17s
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +9ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test client connect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client disconnect! +4ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  connect-mongo-ttl-err-test client connect! +3m
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test made it this far! +13ms
+  connect-mongo-ttl-err-test made it this far! +851ms
+  connect-mongo-ttl-err-test client connect! +58ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 24, 23, 25 ]
+  connect-mongo-ttl-err-test client connect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23, 25, 26 ]
+  connect-mongo-ttl-err-test client disconnect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 25, 26 ]
+  connect-mongo-ttl-err-test made it this far! +2ms
+  connect-mongo-ttl-err-test made it this far! +1s
+  connect-mongo-ttl-err-test client has NOT authenticated +0ms
+  connect-mongo-ttl-err-test redir +0ms /protected
+  connect-mongo-ttl-err-test made it this far! +54ms
+redir []
+  connect-mongo-ttl-err-test made it this far! +1s
+  connect-mongo-ttl-err-test made it this far! +9s
+Trace: { [MongoError: E11000 duplicate key error index: connect-mongo-test.accounts.$userName_1  dup key: { : null }]
+  name: 'MongoError',
+  err: 'E11000 duplicate key error index: connect-mongo-test.accounts.$userName_1  dup key: { : null }',
+  code: 11000,
+  n: 0,
+  connectionId: 911,
+  ok: 1 }
+    at fiveHundred (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/server.js:246:17)
+    at /home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/server.js:152:21
+    at Promise.<anonymous> (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/passport-local-mongoose/lib/passport-local-mongoose.js:178:32)
+    at Promise.<anonymous> (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/mongoose/node_modules/mpromise/lib/promise.js:172:8)
+    at Promise.EventEmitter.emit (events.js:95:17)
+    at Promise.emit (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/mongoose/node_modules/mpromise/lib/promise.js:84:38)
+    at Promise.reject (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/mongoose/node_modules/mpromise/lib/promise.js:111:15)
+    at Promise.error (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/mongoose/lib/promise.js:95:15)
+    at handleSave (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/mongoose/lib/model.js:95:15)
+    at /home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/mongoose/lib/utils.js:408:16
+rs
+17 Dec 23:39:35 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +359ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +11ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id jF7Qi5whFnhJWAM5AAAA +387ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +24ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +11ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:client writing packet {"type":4,"data":"User not found","nsp":"/"} +30ms
+  connect-mongo-ttl-err-test client connect! +5s
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test made it this far! +28ms
+  connect-mongo-ttl-err-test made it this far! +569ms
+  connect-mongo-ttl-err-test made it this far! +11s
+  connect-mongo-ttl-err-test client has NOT authenticated +1ms
+  connect-mongo-ttl-err-test redir +0ms /protected
+  connect-mongo-ttl-err-test made it this far! +8ms
+redir [ '/protected' ]
+  socket.io:client client close with reason transport close +16s
+  connect-mongo-ttl-err-test client disconnect! +106ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test made it this far! +374ms
+  connect-mongo-ttl-err-test made it this far! +3s
+  connect-mongo-ttl-err-test made it this far! +11ms
+redir []
+  connect-mongo-ttl-err-test made it this far! +360ms
+  connect-mongo-ttl-err-test made it this far! +3s
+  connect-mongo-ttl-err-test made it this far! +334ms
+  connect-mongo-ttl-err-test made it this far! +3s
+  connect-mongo-ttl-err-test made it this far! +523ms
+  connect-mongo-ttl-err-test made it this far! +344ms
+  connect-mongo-ttl-err-test made it this far! +1s
+  connect-mongo-ttl-err-test client has NOT authenticated +0ms
+  connect-mongo-ttl-err-test redir +0ms /protected
+  connect-mongo-ttl-err-test made it this far! +7ms
+redir [ '/protected' ]
+  connect-mongo-ttl-err-test made it this far! +362ms
+  connect-mongo-ttl-err-test made it this far! +3s
+  connect-mongo-ttl-err-test made it this far! +509ms
+  connect-mongo-ttl-err-test made it this far! +360ms
+  connect-mongo-ttl-err-test made it this far! +821ms
+  connect-mongo-ttl-err-test request.user +0ms { salt: '4f16a2159aa89732c537fc8bcef0352382c9f2ca12e8bf42fe2f5db060cabc36',
+  hash: '87a6b47d1d1ddd70c893d0eb5963c360ae8fd553d69b2e6cd7c4c8600e8309ddf094640e21df083198a6ab562d698d23a02ca18aa3418efa071071367a4b2322fa213055b45281af614ca727fafd5b7470cf616c51cd2ace1a126f0dc97fe5d8396b3add23dd5a653a1bfcaabefc1cb251dc013d5436f45e91f2accb518ac2257d167a645825a422b0c40bc4a626bc30c7525810619fad72e183c04a02eda014bc437aab1900644fe7ae130a594a9f706f62b892faa1044d45e3ff76730aa058d92b83c1646941a16e3fb02a60b968b97397ec06205e1410cc8eef24a20593bb3cbbe6077c9285f6201ac4a91704e0f38ee95738e7abb5633494ccb1f41027f891f31f0f2feaca195571d4e8efec31197ad50bb5c05a841b88341b5832ba372370138e92664a055211c0494a0aa2669e16538f4859b4e1ffec3b4f43dd745e45dd1ab57993828283a3285a4f4ad829a614a2fb54724e272521c86a6f3bbc2f58f30f4f92665260c3ef195de38abccaab4d88c4f29036aafb81638aa108a9efe6f7e476e4251bfde2a1e6208577585e0961b45f77502c37adf050b06e39c7505fc3abd0d8180c05f1f34a4a8ac96dfb473264040d19d44ae9e160734f81de77723913a536053e2dfd0de3ebf805e410b7fdf86cc9184ade97e55a289758efd0c10d63b0843e0c55a723d009ac6439894be439c20a92363711d7233d97dd043f70',
+  username: 'jeff',
+  _id: 549284d4e58c031b5389d19a,
+  __v: 0,
+  created: Wed Dec 17 2014 23:40:04 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  connect-mongo-ttl-err-test client connect! +108ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  socket.io:server serve client source +35s
+  connect-mongo-ttl-err-test client disconnect! +6ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test made it this far! +5ms
+  socket.io:server incoming connection with id kBkDZoF_grweAPDEAAAB +60ms
+  socket.io:client connecting to namespace / +18s
+  socket.io:namespace adding socket to nsp / +35s
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room kBkDZoF_grweAPDEAAAB +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +4ms
+  connect-mongo-ttl-err-test socket connect +53ms
+  socket.io:client writing packet {"type":2,"data":["joined","You"],"nsp":"/"} +0ms
+  connect-mongo-ttl-err-test online +1ms [ 'kBkDZoF_grweAPDEAAAB' ]
+  socket.io:socket joined room kBkDZoF_grweAPDEAAAB +2ms
+  connect-mongo-ttl-err-test client connect! +68ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25 ]
+  connect-mongo-ttl-err-test client disconnect! +3ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25 ]
+  connect-mongo-ttl-err-test made it this far! +174ms
+  connect-mongo-ttl-err-test made it this far! +9s
+redir []
+  connect-mongo-ttl-err-test made it this far! +4s
+  connect-mongo-ttl-err-test made it this far! +540ms
+  connect-mongo-ttl-err-test made it this far! +4s
+  connect-mongo-ttl-err-test client has NOT authenticated +0ms
+  connect-mongo-ttl-err-test redir +0ms /protected
+  connect-mongo-ttl-err-test made it this far! +3ms
+redir []
+  connect-mongo-ttl-err-test made it this far! +5s
+  connect-mongo-ttl-err-test made it this far! +511ms
+  connect-mongo-ttl-err-test made it this far! +5s
+  connect-mongo-ttl-err-test request.user +0ms { salt: '4f16a2159aa89732c537fc8bcef0352382c9f2ca12e8bf42fe2f5db060cabc36',
+  hash: '87a6b47d1d1ddd70c893d0eb5963c360ae8fd553d69b2e6cd7c4c8600e8309ddf094640e21df083198a6ab562d698d23a02ca18aa3418efa071071367a4b2322fa213055b45281af614ca727fafd5b7470cf616c51cd2ace1a126f0dc97fe5d8396b3add23dd5a653a1bfcaabefc1cb251dc013d5436f45e91f2accb518ac2257d167a645825a422b0c40bc4a626bc30c7525810619fad72e183c04a02eda014bc437aab1900644fe7ae130a594a9f706f62b892faa1044d45e3ff76730aa058d92b83c1646941a16e3fb02a60b968b97397ec06205e1410cc8eef24a20593bb3cbbe6077c9285f6201ac4a91704e0f38ee95738e7abb5633494ccb1f41027f891f31f0f2feaca195571d4e8efec31197ad50bb5c05a841b88341b5832ba372370138e92664a055211c0494a0aa2669e16538f4859b4e1ffec3b4f43dd745e45dd1ab57993828283a3285a4f4ad829a614a2fb54724e272521c86a6f3bbc2f58f30f4f92665260c3ef195de38abccaab4d88c4f29036aafb81638aa108a9efe6f7e476e4251bfde2a1e6208577585e0961b45f77502c37adf050b06e39c7505fc3abd0d8180c05f1f34a4a8ac96dfb473264040d19d44ae9e160734f81de77723913a536053e2dfd0de3ebf805e410b7fdf86cc9184ade97e55a289758efd0c10d63b0843e0c55a723d009ac6439894be439c20a92363711d7233d97dd043f70',
+  username: 'jeff',
+  _id: 549284d4e58c031b5389d19a,
+  __v: 0,
+  created: Wed Dec 17 2014 23:40:04 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +1ms
+  socket.io:client client close with reason transport close +27s
+  socket.io:socket closing socket - reason transport close +27s
+  socket.io:client ignoring remove for kBkDZoF_grweAPDEAAAB +1ms
+  connect-mongo-ttl-err-test socket disconnect! +36ms
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  socket.io:server serve client source +27s
+  connect-mongo-ttl-err-test made it this far! +40ms
+  socket.io:server incoming connection with id PLFDj6MemJHoU2IgAAAC +373ms
+  socket.io:client connecting to namespace / +408ms
+  socket.io:namespace adding socket to nsp / +28s
+  socket.io:socket socket connected - writing packet +412ms
+  socket.io:socket joining room PLFDj6MemJHoU2IgAAAC +1ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +4ms
+  connect-mongo-ttl-err-test socket connect +371ms
+  socket.io:client writing packet {"type":2,"data":["joined","You"],"nsp":"/"} +0ms
+  connect-mongo-ttl-err-test online +0ms [ 'PLFDj6MemJHoU2IgAAAC' ]
+  socket.io:socket joined room PLFDj6MemJHoU2IgAAAC +0ms
+  connect-mongo-ttl-err-test client connect! +57ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25 ]
+  connect-mongo-ttl-err-test client connect! +5ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25, 25 ]
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25 ]
+  connect-mongo-ttl-err-test made it this far! +180ms
+  connect-mongo-ttl-err-test made it this far! +2s
+redir []
+  connect-mongo-ttl-err-test made it this far! +7s
+  connect-mongo-ttl-err-test client connect! +507ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25, 26 ]
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 25, 26 ]
+  connect-mongo-ttl-err-test made it this far! +2ms
+17 Dec 23:41:03 - [nodemon] restarting due to changes...
+17 Dec 23:41:03 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +172ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +13ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  socket.io:server incoming connection with id b2KMqXBmaPel87OyAAAA +201ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  connect-mongo-ttl-err-test client connect! +23ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23 ]
+  connect-mongo-ttl-err-test client connect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  connect-mongo-ttl-err-test client disconnect! +7ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24 ]
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room b2KMqXBmaPel87OyAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +30ms
+  connect-mongo-ttl-err-test socket connect +4ms
+  socket.io:client writing packet {"type":2,"data":["joined","You"],"nsp":"/"} +2ms
+  connect-mongo-ttl-err-test online +1ms [ 'b2KMqXBmaPel87OyAAAA' ]
+  socket.io:socket joined room b2KMqXBmaPel87OyAAAA +2ms
+  connect-mongo-ttl-err-test client connect! +4ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+  connect-mongo-ttl-err-test client has NOT authenticated +3s
+  connect-mongo-ttl-err-test redir +0ms /protected
+redir []
+  connect-mongo-ttl-err-test client connect! +48ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23, 25 ]
+  connect-mongo-ttl-err-test client disconnect! +5s
+  connect-mongo-ttl-err-test clients +0ms [ 17, 24, 23 ]
+redir []
+  connect-mongo-ttl-err-test client has NOT authenticated +1m
+  connect-mongo-ttl-err-test redir +1ms /protected
+redir []
+  socket.io:client client close with reason transport close +1.3m
+  socket.io:socket closing socket - reason transport close +1.3m
+  socket.io:client ignoring remove for b2KMqXBmaPel87OyAAAA +1ms
+  connect-mongo-ttl-err-test socket disconnect! +6s
+  connect-mongo-ttl-err-test online +0ms []
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23 ]
+17 Dec 23:44:22 - [nodemon] restarting due to changes...
+17 Dec 23:44:22 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +7s
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +13ms
+  connect-mongo-ttl-err-test clients +1ms []
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+17 Dec 23:45:10 - [nodemon] restarting due to changes...
+17 Dec 23:45:10 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +1ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +8s
+  connect-mongo-ttl-err-test clients +1ms [ 17 ]
+  connect-mongo-ttl-err-test client disconnect! +11ms
+  connect-mongo-ttl-err-test clients +0ms []
+  connect-mongo-ttl-err-test client connect! +2ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+redir []
+  connect-mongo-ttl-err-test client connect! +1m
+  connect-mongo-ttl-err-test clients +2ms [ 17, 23 ]
+redir []
+  connect-mongo-ttl-err-test request.user +3s { salt: '8f9eb8d6ed6021cc24a76ee3c530a5047276af1f86f0a26b142d699d4976b949',
+  hash: '38a8c74400e9a78881d1048f9e37a1844611953181cd04fe6cbdce6f2b979253a5e5752ae9b0d2c40b87576b6278d0219ea1c3d775430821447f931ab877f5a199bd29c1dd4f2fbde385cb018bd63107e1ee06ffdacbfdef213fe7988cd3dded58318a6dcc8784f1617a7043bd66362c6363abcad20fb7705a5ca458de0f59945353e4d1af6f9c7af607de292fe231cd8b2441d1dccd7532770cf9ba9b23ac07418f391a5e5312b6a15c74a1cf33a5da077363ba40e30b8c0eea584d1d052341033946ec4fc10b2684eda75e6322c9216a0d3aef296e6de7020ea982504751c290a7e790c4ec79dcbb9a7c8faa406253b86b21ab814d2be30e2e59e8ba68dad95d8a7b27871e73ccc8ac6e553c9ad60d1614f2c6534395e07f927ba0fb83629955d72e2b5fad8deb2925d96e910a14c2f2141499964394e4dc2bb7dbaeef6a529d3339a6dae2061c7ad4d82642f2e64f75891930d610d30790f70c33cffd696e98e78da660312a49975179225599806b844e4cef9911f874f022554be4c2fd21927cf7f3c430d50206b7061f441ba159359d27482171931b5fe6f1f4104d60a3d79e079d01882394ac659aff519a25c9ed94096add40fa08b51c171d8b4095fce5dcb7eb2871e2e3d78e85365f42faffac8ffa94327a5f22424cc52972387f57a51fcf33220658ac6872cb7f76c1672f0ad3fb15afd26287efa8af1a5c0935c3',
+  username: 'richard cranium',
+  _id: 54928554b0e47761531458bb,
+  __v: 0,
+  created: Wed Dec 17 2014 23:42:12 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test richard cranium has authenticated +2ms
+  socket.io:server serve client source +1.3m
+  connect-mongo-ttl-err-test client connect! +42ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24 ]
+  socket.io:server incoming connection with id Db_7hsHkLfl7cy2zAAAA +85ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  socket.io:socket socket connected - writing packet +0ms
+  socket.io:socket joining room Db_7hsHkLfl7cy2zAAAA +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +3ms
+  connect-mongo-ttl-err-test socket connect +84ms
+  socket.io:client writing packet {"type":2,"data":["joined","You"],"nsp":"/"} +1ms
+  connect-mongo-ttl-err-test online +1ms [ 'Db_7hsHkLfl7cy2zAAAA' ]
+  socket.io:socket joined room Db_7hsHkLfl7cy2zAAAA +1ms
+  connect-mongo-ttl-err-test client connect! +42ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23, 24, 25 ]
+  connect-mongo-ttl-err-test request.user +2s { salt: '4f16a2159aa89732c537fc8bcef0352382c9f2ca12e8bf42fe2f5db060cabc36',
+  hash: '87a6b47d1d1ddd70c893d0eb5963c360ae8fd553d69b2e6cd7c4c8600e8309ddf094640e21df083198a6ab562d698d23a02ca18aa3418efa071071367a4b2322fa213055b45281af614ca727fafd5b7470cf616c51cd2ace1a126f0dc97fe5d8396b3add23dd5a653a1bfcaabefc1cb251dc013d5436f45e91f2accb518ac2257d167a645825a422b0c40bc4a626bc30c7525810619fad72e183c04a02eda014bc437aab1900644fe7ae130a594a9f706f62b892faa1044d45e3ff76730aa058d92b83c1646941a16e3fb02a60b968b97397ec06205e1410cc8eef24a20593bb3cbbe6077c9285f6201ac4a91704e0f38ee95738e7abb5633494ccb1f41027f891f31f0f2feaca195571d4e8efec31197ad50bb5c05a841b88341b5832ba372370138e92664a055211c0494a0aa2669e16538f4859b4e1ffec3b4f43dd745e45dd1ab57993828283a3285a4f4ad829a614a2fb54724e272521c86a6f3bbc2f58f30f4f92665260c3ef195de38abccaab4d88c4f29036aafb81638aa108a9efe6f7e476e4251bfde2a1e6208577585e0961b45f77502c37adf050b06e39c7505fc3abd0d8180c05f1f34a4a8ac96dfb473264040d19d44ae9e160734f81de77723913a536053e2dfd0de3ebf805e410b7fdf86cc9184ade97e55a289758efd0c10d63b0843e0c55a723d009ac6439894be439c20a92363711d7233d97dd043f70',
+  username: 'jeff',
+  _id: 549284d4e58c031b5389d19a,
+  __v: 0,
+  created: Wed Dec 17 2014 23:40:04 GMT-0800 (PST) }
+  connect-mongo-ttl-err-test jeff has authenticated +0ms
+  connect-mongo-ttl-err-test client connect! +110ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25, 26 ]
+  socket.io:server serve client source +1s
+  connect-mongo-ttl-err-test client disconnect! +10ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25 ]
+  connect-mongo-ttl-err-test client connect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25, 26 ]
+  socket.io:server incoming connection with id Mf25sBBoK5pd4025AAAB +61ms
+  socket.io:client connecting to namespace / +1s
+  socket.io:namespace adding socket to nsp / +1s
+  socket.io:socket socket connected - writing packet +1s
+  socket.io:socket joining room Mf25sBBoK5pd4025AAAB +0ms
+  socket.io:client writing packet {"type":0,"nsp":"/"} +3ms
+  connect-mongo-ttl-err-test socket connect +54ms
+  socket.io:client writing packet {"type":2,"data":["joined","You"],"nsp":"/"} +0ms
+  socket.io:client writing packet ["2[\"join\",\"Mf25sBBoK5pd4025AAAB\"]"] +1ms
+  connect-mongo-ttl-err-test online +1ms [ 'Db_7hsHkLfl7cy2zAAAA', 'Mf25sBBoK5pd4025AAAB' ]
+  socket.io:socket joined room Mf25sBBoK5pd4025AAAB +1ms
+  connect-mongo-ttl-err-test client connect! +58ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25, 26, 27 ]
+  connect-mongo-ttl-err-test client connect! +4ms
+  connect-mongo-ttl-err-test clients +1ms [ 17, 23, 24, 25, 26, 27, 28 ]
+  connect-mongo-ttl-err-test client disconnect! +1ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 23, 24, 25, 26, 28 ]
+17 Dec 23:46:50 - [nodemon] restarting due to changes...
+17 Dec 23:46:50 - [nodemon] starting `node server.js`
+  socket.io:server initializing namespace / +0ms
+  socket.io:server creating engine.io instance with opts {"path":"/socket.io"} +1ms
+  socket.io:server attaching client serving req handler +2ms
+  connect-mongo-ttl-err-test the server is ready! https://localhost:1337 +0ms
+  connect-mongo-ttl-err-test client connect! +332ms
+  connect-mongo-ttl-err-test clients +0ms [ 17 ]
+  connect-mongo-ttl-err-test client connect! +4ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 18 ]
+  connect-mongo-ttl-err-test client connect! +15ms
+  connect-mongo-ttl-err-test clients +0ms [ 17, 18, 17 ]
+  connect-mongo-ttl-err-test client disconnect! +0ms
+  connect-mongo-ttl-err-test clients +0ms [ 18, 17 ]
+  socket.io:server incoming connection with id unsZSQvRAWq5lOaYAAAA +361ms
+  socket.io:client connecting to namespace / +0ms
+  socket.io:namespace adding socket to nsp / +0ms
+  socket.io:server incoming connection with id Gk-te3JhGAd4y28jAAAB +12ms
+  socket.io:client connecting to namespace / +12ms
+  socket.io:namespace adding socket to nsp / +12ms
+
+/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/lib/connect-mongo.js:161
+                throw new Error('Error setting TTL index on collection : ' + s
+                      ^
+Error: Error setting TTL index on collection : sessions
+    at /home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/lib/connect-mongo.js:161:23
+    at /home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1404:28
+    at /home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1542:30
+    at /home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:159:22
+    at commandHandler (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:678:48)
+    at /home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1806:9
+    at __executeQueryCommand (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1636:44)
+    at Db._executeQueryCommand (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/db.js:1805:7)
+    at Cursor.nextObject (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:729:13)
+    at Cursor.toArray (/home/jeff/git/techjeffharris/connect-mongo-ttl-error-example/node_modules/connect-mongo/node_modules/mongodb/lib/mongodb/cursor.js:158:10)
+17 Dec 23:46:51 - [nodemon] app crashed - waiting for file changes before starting...
+  

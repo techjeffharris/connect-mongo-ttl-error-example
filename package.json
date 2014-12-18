@@ -1,0 +1,26 @@
+{
+  "name": "connect-mongo-ttl-error-example",
+  "version": "0.0.0",
+  "description": "attempt to recreate Error setting TTL index on collection #80",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "connect-flash": "~0.1.1",
+    "cookie-parser": "~1.3.3",
+    "passport.socketio": "~3.4.1",
+    "passport-local-mongoose": "~1.0.0",
+    "passport": "~0.2.1",
+    "serve-static": "~1.7.1",
+    "express-session": "~1.9.3",
+    "express": "~4.10.6",
+    "socket.io": "~1.2.1",
+    "connect-mongo": "~0.4.1",
+    "mongoose": "~3.8.20",
+    "debug": "~2.1.0"
+  }
+}
