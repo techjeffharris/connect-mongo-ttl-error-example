@@ -126,7 +126,7 @@ connection.once('open', function connectionOpen () {
         'local', { 
             failureFlash: 'Authentication Failure.  Please try again.',
             failureRedirect: '/logon', 
-            successRedirect: '/'
+            successRedirect: '/protected'
         })
     );
 
@@ -251,11 +251,7 @@ connection.once('open', function connectionOpen () {
         } else  {
             debug('client has NOT authenticated');
 
-            var redir = request.url;
-            debug('redir', redir);
-
-            request.flash('redir', redir);
-            request.flash('error', 'You need to logon before you can visit ' + redir );
+            request.flash('error', 'You need to logon before you can visit ' + request.url );
             
             response.redirect('/logon');
         }

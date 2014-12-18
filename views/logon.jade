@@ -9,10 +9,7 @@ block content
             | &nbsp;]&nbsp;
         if (error) 
             p.err=error
-        - var action = '/logon'
-        - console.log('redir', redir)
-        form(action=action, method='POST')
-            input(type='hidden', name='redir', value=redir)
+        form(action='/logon', method='POST')
             table
                 tbody
                     tr
